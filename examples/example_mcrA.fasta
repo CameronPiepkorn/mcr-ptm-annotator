@@ -1,0 +1,30 @@
+; ── SYNTHETIC PLACEHOLDER SEQUENCES ──────────────────────────────────────
+;
+; These sequences are NOT real McrA protein sequences.
+; They are synthetic amino acid strings used only to demonstrate the API.
+;
+; To obtain verified M. acetivorans C2A McrA protein sequence:
+;   UniProt: Q8TN35  (McrA, M. acetivorans C2A)
+;   NCBI:    NP_618892.1
+;   https://www.ncbi.nlm.nih.gov/protein/NP_618892.1
+;
+; To obtain M. marburgensis McrA (PDB reference sequence):
+;   UniProt: P11558
+;   PDB:     1MRO chain A
+;   https://www.rcsb.org/structure/1MRO
+;
+; Quick download of M. acetivorans McrA protein:
+;   efetch -db protein -id NP_618892.1 -format fasta > McrA_acetivorans.faa
+; ──────────────────────────────────────────────────────────────────────────
+
+; Synthetic sequence of length 553 (matches M. marburgensis reference length)
+; with correct residue types (G, H, R, Q, C) placed at known PTM positions:
+;   G445 (thioglycine), H257 (1-N-methylhistidine), R271 (5-methylarginine),
+;   Q400 (2-methylglutamine), C452 (S-methylcysteine)
+>SYNTHETIC_McrA_placeholder_553aa
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
