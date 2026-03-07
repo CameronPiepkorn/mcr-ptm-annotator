@@ -38,6 +38,22 @@ def parse_fasta(path: str | Path) -> Iterator[tuple[str, str]]:
         yield current_id, "".join(buffer)
 
 
+DNA_CHARS = set("ATCGNU")  # nucleotide characters (RNA U included)
+
+
 def is_protein_sequence(seq: str) -> bool:
-    """Return True if sequence contains only standard amino acid characters."""
-    return all(c in AMINO_ACIDS for c in seq.upper() if c not in (" ", "\n"))
+    """
+    Return True if sequence looks like a protein (not DNA/RNA).
+
+    A sequence is treated as DNA/RNA — and therefore NOT a protein — if
+    all of its characters fall within the nucleotide alphabet (ATCGNU).
+    This handles the ambiguity that A, C, G, T are also valid amino acid
+    single-letter codes.
+    """
+    cleaned = seq.upper().replace(" ", "").replace("\n", "")
+    if not cleaned:
+        return False
+    # Reject if every character is a nucleotide symbol
+    if all(c in DNA_CHARS for c in cleaned):
+        return False
+    return all(c in AMINO_ACIDS for c in cleaned)
